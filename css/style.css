@@ -1,0 +1,386 @@
+
+body{
+    background-color: none;
+    margin: 0;
+}
+.box{
+    background: black;
+    width: 500px;
+    height: 500px;
+    margin-left: 30px;
+    /* justify-content: flex-start; */
+    /* display: flex; */
+    /* align-items: center; */
+    position: relative;
+    
+}
+.boll{
+    background: #da6f92;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    /* bottom: 0; */
+    box-shadow: red;
+    border: 1px solid red;
+    top: 0;
+    right: -5%;
+    margin-top: 221px;
+}
+
+.imag{
+    
+    position: relative;
+    overflow: hidden;
+}
+.imag img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease;
+}
+.img-pr{
+    background: #0000008f;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 1s ease;
+}
+.imag:hover .img-pr{
+    opacity: 0;
+}
+.imag:hover img{
+    transform: scale(1.2);
+}
+
+
+.img-hadding{
+    overflow: hidden;
+    
+    width: 401px;
+}
+.img-part{
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+   
+.img-part img{
+    width: 100%;
+    transition: all 1s ease;
+}
+.hadding-tag{
+    background: #00000052;
+    /* width: 117%; */
+    height: 238px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    transition: all 1s ease
+}
+
+.hadding-tag h1{
+    color: #85db97;
+    position: relative;
+    right: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all 2s ease;
+    overflow: hidden;
+    transform: translateY(50%);
+}
+.hadding-tag p{
+    margin: 0;
+    width: 370px;
+    color: #85db97;
+    position: relative;
+    left: 100%;
+    top: 25px;
+    opacity: 0;
+    transition: all 2s ease;
+    margin: auto;
+}
+.hadding-tag ul{
+    left: 137px;
+    position: relative;
+    top:155px;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+
+.hadding-tag li{
+    padding: 4px 9px;
+    background: #ffffff21;
+    margin-right: 10px;
+    line-height: 4px;
+}
+
+.hadding-tag li a{
+    color: #85db97;
+
+}
+.hadding-tag li a i{
+    font-size: 23px;
+}
+
+.img-hadding:hover .hadding-tag{
+    /* opacity: 0; 
+    z-index: 1; */
+}
+.img-hadding:hover .img-part img{
+
+    transform: scale(1.2); 
+    
+
+}
+.img-hadding:hover .hadding-tag h1{
+    right: 0; 
+    opacity: 1;
+   
+
+    
+}
+.img-hadding:hover .hadding-tag p{
+    left: 0; 
+    opacity: 1;
+    ;
+  
+
+}
+.img-hadding:hover .hadding-tag ul{
+    top: 73px;
+    opacity: 1;
+
+}
+.bannar-top{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+}
+.bannar-top img{
+    transform: scale(1);
+    animation-name: imgzoom;
+    animation-duration:30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+}
+@keyframes imgzoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+.bannar{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+}
+.overlay{
+    position: absolute;
+    background: #000000b3;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.a-position{
+    position: absolute;
+    right: 59%;
+    top: 74%;
+}
+.bannar a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #03c9f4;
+    font-size: 24px;
+    text-decoration:none;
+    text-transform: uppercase;
+    transition: all 2s ease;
+    overflow: hidden;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+
+}
+.bannar a:hover{
+    background-color:#03c9f4 ;
+    color: #050801;
+    box-shadow: 0 0 5px #03c9f4,
+                0 0 25px #03c9f4,
+                0 0 50px #03c9f4,
+                0 0 200px #03c9f4;
+}
+.bannar a span{
+    position: absolute;
+    display: block;
+}
+.bannar a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    animation: line1 2s linear infinite;
+ 
+    background: linear-gradient(90deg,transparent,#03c9f4);
+}
+@keyframes line1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+
+    }
+}
+
+.hover h2{
+    margin: auto;
+    height: 46px;
+    width: 186px;
+    border-bottom: 5px solid #da5c5c;
+    padding-bottom: 7px;
+    text-transform: capitalize;
+    color: #000608;
+}
+.bannar a span:nth-child(2){
+    top:-100%;
+    right: 0;
+    width:2px;
+    height: 100% ;
+    animation: line2 2s linear infinite;
+    animation-delay: 0.50s;
+ 
+    background: linear-gradient(180deg,transparent,#03c9f4);
+}
+@keyframes line2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+
+    }
+}
+.bannar a span:nth-child(3){
+    right: 0;
+   bottom: 0;
+    width: 100%;
+    height: 2px;
+    animation: line3 2s linear infinite;
+    animation-delay: 1.3s;
+ 
+    background: linear-gradient(90deg,transparent,#03c9f4);
+}
+@keyframes line3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+
+    }
+}
+.bannar a span:nth-child(4){
+    top:100%;
+    left: 0;
+    width:2px;
+    height: 100% ;
+    animation: line4 2s linear infinite;
+    animation-delay: 1.6s;
+ 
+    background: linear-gradient(180deg,transparent,#03c9f4);
+}
+@keyframes line4{
+    0%{
+        top: 100%;
+    }
+    50%,100%{
+        top: -100%;
+
+    }
+}
+.a-position a{
+    filter: hue-rotate(290deg);
+}
+.b-position {
+    position: absolute;
+    right: 20%;
+    top: 74%;
+}
+
+/* .bannar h1{
+    position: absolute;
+    color: honeydew;
+    right: 42px;
+    top: 54px;
+    display: block;
+    overflow: hidden;
+} */
+.bannar h1{
+    position: absolute;
+    color: #f17403;
+    right: 16%;
+    top: 54px;
+    display: block;
+    overflow: hidden;
+    animation: h1 2s linear;
+    animation-delay: 0.50s;
+    transition: all 5s ease;
+    z-index: 1;
+    text-transform: capitalize;
+}
+@keyframes h1{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top:54px;
+
+    }
+}
+.bannar img{height: 100vh;}
+
+.bannar p{
+    position: absolute;
+    color: #f17403;
+    left: 0;
+    top: 145px;
+    display: block;
+    overflow: hidden;
+    animation: p 2s linear;
+    animation-delay:1.6s;
+    transition: all 5s ease;
+    max-width: 655px;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(29%, 29%);
+}
+@keyframes p{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top:145px;
+        opacity: 1;
+
+    }
+}
+.responsive h1{
+    margin: auto;
+    height: 69px;
+    width: 75%;
+    border-bottom: 5px solid #da5c5c;
+    padding-bottom: 7px;
+    text-transform: capitalize;
+    color: #000608;
+}
